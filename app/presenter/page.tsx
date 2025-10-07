@@ -65,7 +65,7 @@ export default function PresenterPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-[#000000] mb-2">Presenter Portal</h1>
+        <h1 className="text-4xl font-bold text-black mb-2">Presenter Portal</h1>
         <p className="text-gray-600">Manage your presentations and submit new abstracts</p>
       </div>
 
@@ -85,7 +85,7 @@ export default function PresenterPage() {
           onClick={() => setView('submit')}
           className={`px-6 py-3 rounded-lg font-medium transition-colors ${
             view === 'submit'
-              ? 'bg-[#FDB913] text-[#000000]'
+              ? 'bg-[#FDB913] text-black'
               : 'bg-white text-gray-700 hover:bg-gray-100'
           } shadow-md`}
         >
@@ -102,7 +102,7 @@ export default function PresenterPage() {
                 {currentPresenter.name.split(' ').map(n => n[0]).join('')}
               </div>
               <div className="flex-1">
-                <h2 className="text-2xl font-bold text-[#000000] mb-1">{currentPresenter.name}</h2>
+                <h2 className="text-2xl font-bold text-black mb-1">{currentPresenter.name}</h2>
                 <p className="text-gray-600 mb-1">{currentPresenter.title}</p>
                 <p className="text-gray-600 mb-2">{currentPresenter.affiliation}</p>
                 <p className="text-sm text-gray-500">{currentPresenter.email}</p>
@@ -114,18 +114,18 @@ export default function PresenterPage() {
           </div>
 
           {/* Sessions */}
-          <h2 className="text-2xl font-bold text-[#000000] mb-4">Your Scheduled Presentations</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">Your Scheduled Presentations</h2>
           <div className="space-y-4">
             {presenterSessions.map(session => (
               <div key={session.id} className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-[#000000] mb-2">{session.title}</h3>
+                    <h3 className="text-xl font-bold text-black mb-2">{session.title}</h3>
                     <div className="flex flex-wrap gap-2 mb-2">
                       <span className="text-xs bg-[#000000] text-white px-2 py-1 rounded">
                         {session.track}
                       </span>
-                      <span className="text-xs bg-[#FDB913] text-[#000000] px-2 py-1 rounded">
+                      <span className="text-xs bg-[#FDB913] text-black px-2 py-1 rounded">
                         {session.topic}
                       </span>
                     </div>
@@ -179,7 +179,7 @@ export default function PresenterPage() {
         </div>
       ) : (
         <div className="bg-white p-8 rounded-lg shadow-md max-w-3xl">
-          <h2 className="text-2xl font-bold text-[#000000] mb-6">Submit New Abstract</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">Submit New Abstract</h2>
 
           {submitted ? (
             <div className="text-center py-12">
@@ -188,7 +188,7 @@ export default function PresenterPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-[#000000] mb-2">Abstract Submitted!</h3>
+              <h3 className="text-2xl font-bold text-black mb-2">Abstract Submitted!</h3>
               <p className="text-gray-600">Your abstract has been received and will be reviewed by the program committee.</p>
               <p className="text-sm text-gray-500 mt-2">You will receive a confirmation email shortly.</p>
             </div>
@@ -342,7 +342,7 @@ export default function PresenterPage() {
               <div className="flex gap-4 pt-4">
                 <button
                   type="submit"
-                  className="flex-1 px-6 py-3 bg-[#FDB913] text-[#000000] rounded-md font-bold hover:bg-[#f5c842] transition-colors"
+                  className="flex-1 px-6 py-3 bg-[#FDB913] text-black rounded-md font-bold hover:bg-[#f5c842] transition-colors"
                 >
                   Submit Abstract
                 </button>

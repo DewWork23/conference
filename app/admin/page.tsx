@@ -39,7 +39,7 @@ export default function AdminPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-[#000000] mb-2">Admin Dashboard</h1>
+        <h1 className="text-4xl font-bold text-black mb-2">Admin Dashboard</h1>
         <p className="text-gray-600">Conference management and oversight</p>
       </div>
 
@@ -56,8 +56,8 @@ export default function AdminPage() {
             onClick={() => setSelectedTab(tab.id as any)}
             className={`px-6 py-3 font-medium transition-colors border-b-2 ${
               selectedTab === tab.id
-                ? 'border-[#FDB913] text-[#000000]'
-                : 'border-transparent text-gray-600 hover:text-[#000000]'
+                ? 'border-[#FDB913] text-black'
+                : 'border-transparent text-gray-600 hover:text-black'
             }`}
           >
             {tab.label}
@@ -74,9 +74,9 @@ export default function AdminPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-gray-600 text-sm mb-1">Total Sessions</p>
-                  <p className="text-3xl font-bold text-[#000000]">{stats.totalSessions}</p>
+                  <p className="text-3xl font-bold text-black">{stats.totalSessions}</p>
                 </div>
-                <svg className="w-12 h-12 text-[#000000] opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-12 h-12 text-black opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
@@ -86,7 +86,7 @@ export default function AdminPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-gray-600 text-sm mb-1">Presenters</p>
-                  <p className="text-3xl font-bold text-[#000000]">{stats.totalPresenters}</p>
+                  <p className="text-3xl font-bold text-black">{stats.totalPresenters}</p>
                 </div>
                 <svg className="w-12 h-12 text-[#FDB913] opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -98,7 +98,7 @@ export default function AdminPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-gray-600 text-sm mb-1">Registered Attendees</p>
-                  <p className="text-3xl font-bold text-[#000000]">{stats.totalAttendees}</p>
+                  <p className="text-3xl font-bold text-black">{stats.totalAttendees}</p>
                 </div>
                 <svg className="w-12 h-12 text-green-500 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -110,7 +110,7 @@ export default function AdminPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-gray-600 text-sm mb-1">Announcements Sent</p>
-                  <p className="text-3xl font-bold text-[#000000]">{stats.totalAnnouncements}</p>
+                  <p className="text-3xl font-bold text-black">{stats.totalAnnouncements}</p>
                 </div>
                 <svg className="w-12 h-12 text-blue-500 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
@@ -122,7 +122,7 @@ export default function AdminPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-gray-600 text-sm mb-1">Pending Abstracts</p>
-                  <p className="text-3xl font-bold text-[#000000]">{stats.pendingAbstracts}</p>
+                  <p className="text-3xl font-bold text-black">{stats.pendingAbstracts}</p>
                 </div>
                 <svg className="w-12 h-12 text-orange-500 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -134,7 +134,7 @@ export default function AdminPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-gray-600 text-sm mb-1">Approved Abstracts</p>
-                  <p className="text-3xl font-bold text-[#000000]">{stats.approvedAbstracts}</p>
+                  <p className="text-3xl font-bold text-black">{stats.approvedAbstracts}</p>
                 </div>
                 <svg className="w-12 h-12 text-purple-500 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -145,7 +145,7 @@ export default function AdminPage() {
 
           {/* Recent Activity */}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-bold text-[#000000] mb-4">Recent Activity</h2>
+            <h2 className="text-xl font-bold text-black mb-4">Recent Activity</h2>
             <div className="space-y-3">
               <div className="flex items-center py-2 border-b">
                 <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
@@ -218,7 +218,7 @@ export default function AdminPage() {
             <div key={abstract.id} className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-[#000000] mb-2">{abstract.title}</h3>
+                  <h3 className="text-lg font-bold text-black mb-2">{abstract.title}</h3>
                   <p className="text-sm text-gray-600 mb-2">Presenter: {abstract.presenter}</p>
                   <p className="text-xs text-gray-500">Submitted: {new Date(abstract.submitted).toLocaleDateString()}</p>
                 </div>
@@ -253,7 +253,7 @@ export default function AdminPage() {
       {/* Announcements Tab */}
       {selectedTab === 'announcements' && (
         <div className="bg-white p-8 rounded-lg shadow-md max-w-2xl">
-          <h2 className="text-2xl font-bold text-[#000000] mb-6">Create New Announcement</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">Create New Announcement</h2>
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -315,7 +315,7 @@ export default function AdminPage() {
             <button
               onClick={handleSendAnnouncement}
               disabled={!newAnnouncement.title || !newAnnouncement.content}
-              className="w-full px-6 py-3 bg-[#FDB913] text-[#000000] rounded-md font-bold hover:bg-[#f5c842] transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+              className="w-full px-6 py-3 bg-[#FDB913] text-black rounded-md font-bold hover:bg-[#f5c842] transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
             >
               Send Announcement
             </button>

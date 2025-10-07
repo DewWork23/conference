@@ -25,7 +25,7 @@ export default function NetworkingPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-[#000000] mb-2">Networking</h1>
+        <h1 className="text-4xl font-bold text-black mb-2">Networking</h1>
         <p className="text-gray-600">Connect with fellow attendees and presenters</p>
       </div>
 
@@ -37,17 +37,17 @@ export default function NetworkingPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
           </div>
-          <h3 className="text-lg font-bold text-[#000000] mb-2">Attendee Directory</h3>
+          <h3 className="text-lg font-bold text-black mb-2">Attendee Directory</h3>
           <p className="text-sm text-gray-600">Browse and connect with {allParticipants.length} conference participants</p>
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="w-12 h-12 bg-[#FDB913] rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-[#000000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
           </div>
-          <h3 className="text-lg font-bold text-[#000000] mb-2">Networking Events</h3>
+          <h3 className="text-lg font-bold text-black mb-2">Networking Events</h3>
           <p className="text-sm text-gray-600">Evening reception on March 26 at 5:30 PM</p>
         </div>
 
@@ -57,7 +57,7 @@ export default function NetworkingPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
-          <h3 className="text-lg font-bold text-[#000000] mb-2">Interest Groups</h3>
+          <h3 className="text-lg font-bold text-black mb-2">Interest Groups</h3>
           <p className="text-sm text-gray-600">Connect based on practice area and interests</p>
         </div>
       </div>
@@ -105,10 +105,10 @@ export default function NetworkingPage() {
                 {participant.name.split(' ').map(n => n[0]).join('')}
               </div>
               <div className="ml-4 flex-1">
-                <h3 className="font-bold text-[#000000] text-lg mb-1">{participant.name}</h3>
+                <h3 className="font-bold text-black text-lg mb-1">{participant.name}</h3>
                 <span className={`text-xs px-2 py-1 rounded-full ${
                   participant.type === 'presenter'
-                    ? 'bg-[#FDB913] text-[#000000]'
+                    ? 'bg-[#FDB913] text-black'
                     : 'bg-gray-200 text-gray-700'
                 }`}>
                   {participant.type === 'presenter' ? 'Presenter' : 'Attendee'}
@@ -149,7 +149,7 @@ export default function NetworkingPage() {
 
       {/* Interest Groups */}
       <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold text-[#000000] mb-6">Interest Groups</h2>
+        <h2 className="text-2xl font-bold text-black mb-6">Interest Groups</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
             { name: 'Rural Social Work', members: 45, color: 'bg-blue-100 text-blue-800' },
@@ -160,12 +160,12 @@ export default function NetworkingPage() {
             { name: 'Social Justice', members: 41, color: 'bg-pink-100 text-pink-800' }
           ].map(group => (
             <div key={group.name} className="border border-gray-200 rounded-lg p-4 hover:border-[#FDB913] transition-colors cursor-pointer">
-              <h3 className="font-bold text-[#000000] mb-2">{group.name}</h3>
+              <h3 className="font-bold text-black mb-2">{group.name}</h3>
               <div className="flex items-center justify-between">
                 <span className={`text-xs px-3 py-1 rounded-full ${group.color}`}>
                   {group.members} members
                 </span>
-                <button className="text-sm text-[#000000] hover:underline font-medium">
+                <button className="text-sm text-black hover:underline font-medium">
                   Join
                 </button>
               </div>

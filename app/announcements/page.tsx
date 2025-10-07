@@ -78,7 +78,7 @@ export default function AnnouncementsPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-[#000000] mb-2">Conference Announcements</h1>
+        <h1 className="text-4xl font-bold text-black mb-2">Conference Announcements</h1>
         <p className="text-gray-600">Stay updated with the latest news and important information</p>
       </div>
 
@@ -87,7 +87,7 @@ export default function AnnouncementsPage() {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <div className="w-12 h-12 bg-[#FDB913] rounded-full flex items-center justify-center mr-4">
-              <svg className="w-7 h-7 text-[#000000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
               </svg>
             </div>
@@ -117,7 +117,7 @@ export default function AnnouncementsPage() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-bold text-[#000000]">{announcement.title}</h3>
+                    <h3 className="text-xl font-bold text-black">{announcement.title}</h3>
                     {getPriorityLabel(announcement.priority)}
                   </div>
                   <p className="text-gray-700 mb-3">{announcement.content}</p>
@@ -136,13 +136,13 @@ export default function AnnouncementsPage() {
 
       {/* Mock notification settings */}
       <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
-        <h3 className="text-lg font-bold text-[#000000] mb-4">Notification Preferences</h3>
+        <h3 className="text-lg font-bold text-black mb-4">Notification Preferences</h3>
         <div className="space-y-3">
           <label className="flex items-center">
             <input
               type="checkbox"
               defaultChecked
-              className="w-4 h-4 text-[#000000] border-gray-300 rounded focus:ring-[#000000]"
+              className="w-4 h-4 text-black border-gray-300 rounded focus:ring-[#000000]"
             />
             <span className="ml-3 text-gray-700">Email notifications for important announcements</span>
           </label>
@@ -150,14 +150,14 @@ export default function AnnouncementsPage() {
             <input
               type="checkbox"
               defaultChecked
-              className="w-4 h-4 text-[#000000] border-gray-300 rounded focus:ring-[#000000]"
+              className="w-4 h-4 text-black border-gray-300 rounded focus:ring-[#000000]"
             />
             <span className="ml-3 text-gray-700">Push notifications for schedule changes</span>
           </label>
           <label className="flex items-center">
             <input
               type="checkbox"
-              className="w-4 h-4 text-[#000000] border-gray-300 rounded focus:ring-[#000000]"
+              className="w-4 h-4 text-black border-gray-300 rounded focus:ring-[#000000]"
             />
             <span className="ml-3 text-gray-700">Daily digest of all announcements</span>
           </label>
