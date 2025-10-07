@@ -42,7 +42,7 @@ export default function Navigation() {
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   pathname === link.href
                     ? 'bg-[#FDB913] text-[#000000]'
-                    : 'hover:bg-[#FDB913]/10'
+                    : 'text-white hover:bg-[#FDB913]/10'
                 }`}
               >
                 {link.label}
@@ -75,7 +75,7 @@ export default function Navigation() {
                 className={`block px-3 py-2 rounded-md text-sm font-medium ${
                   pathname === link.href
                     ? 'bg-[#FDB913] text-[#000000]'
-                    : 'hover:bg-[#FDB913]/10'
+                    : 'text-white hover:bg-[#FDB913]/10'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
