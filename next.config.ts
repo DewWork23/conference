@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath: process.env.NODE_ENV === 'production' ? '/conference' : '',
+  trailingSlash: true,
 };
 
 export default nextConfig;
