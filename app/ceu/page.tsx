@@ -27,7 +27,7 @@ export default function CEUPage() {
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-[#FDB913] mb-2">CEU Tracking</h1>
-        <p className="text-gray-600">Track your continuing education credits and download certificates</p>
+        <p className="text-[#FDB913]">Track your continuing education credits and download certificates</p>
       </div>
 
       {/* CEU Summary Card */}

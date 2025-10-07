@@ -26,7 +26,7 @@ export default function NetworkingPage() {
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-[#FDB913] mb-2">Networking</h1>
-        <p className="text-gray-600">Connect with fellow attendees and presenters</p>
+        <p className="text-[#FDB913]">Connect with fellow attendees and presenters</p>
       </div>
 
       {/* Networking Features */}
