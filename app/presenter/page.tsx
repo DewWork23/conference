@@ -65,7 +65,7 @@ export default function PresenterPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-black mb-2">Presenter Portal</h1>
+        <h1 className="text-4xl font-bold text-[#FDB913] mb-2">Presenter Portal</h1>
         <p className="text-gray-600">Manage your presentations and submit new abstracts</p>
       </div>
 

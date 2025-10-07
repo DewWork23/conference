@@ -40,19 +40,19 @@ export default function Home() {
       {/* Quick Stats */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
         <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#000000]">
-          <div className="text-4xl font-bold text-black mb-2">30</div>
+          <div className="text-4xl font-bold text-[#FDB913] mb-2">30</div>
           <div className="text-gray-600">Sessions</div>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#FDB913]">
-          <div className="text-4xl font-bold text-black mb-2">20</div>
+          <div className="text-4xl font-bold text-[#FDB913] mb-2">20</div>
           <div className="text-gray-600">Expert Presenters</div>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#000000]">
-          <div className="text-4xl font-bold text-black mb-2">6</div>
+          <div className="text-4xl font-bold text-[#FDB913] mb-2">6</div>
           <div className="text-gray-600">Topic Tracks</div>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#FDB913]">
-          <div className="text-4xl font-bold text-black mb-2">37.5</div>
+          <div className="text-4xl font-bold text-[#FDB913] mb-2">37.5</div>
           <div className="text-gray-600">CEU Credits</div>
         </div>
       </div>
