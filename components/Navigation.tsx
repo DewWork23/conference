@@ -20,11 +20,11 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-[#041E42] text-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-[#000000] text-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-[#FDB913] rounded-full flex items-center justify-center font-bold text-[#041E42]">
+            <div className="w-10 h-10 bg-[#FDB913] rounded-full flex items-center justify-center font-bold text-[#000000]">
               SW
             </div>
             <div>
@@ -41,7 +41,7 @@ export default function Navigation() {
                 href={link.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   pathname === link.href
-                    ? 'bg-[#FDB913] text-[#041E42]'
+                    ? 'bg-[#FDB913] text-[#000000]'
                     : 'hover:bg-[#FDB913]/10'
                 }`}
               >
@@ -74,7 +74,7 @@ export default function Navigation() {
                 href={link.href}
                 className={`block px-3 py-2 rounded-md text-sm font-medium ${
                   pathname === link.href
-                    ? 'bg-[#FDB913] text-[#041E42]'
+                    ? 'bg-[#FDB913] text-[#000000]'
                     : 'hover:bg-[#FDB913]/10'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}

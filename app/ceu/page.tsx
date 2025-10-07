@@ -26,12 +26,12 @@ export default function CEUPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-[#041E42] mb-2">CEU Tracking</h1>
+        <h1 className="text-4xl font-bold text-[#000000] mb-2">CEU Tracking</h1>
         <p className="text-gray-600">Track your continuing education credits and download certificates</p>
       </div>
 
       {/* CEU Summary Card */}
-      <div className="bg-gradient-to-r from-[#041E42] to-[#0A2F5F] text-white rounded-lg p-8 mb-8 shadow-xl">
+      <div className="bg-gradient-to-r from-[#000000] to-[#0A2F5F] text-white rounded-lg p-8 mb-8 shadow-xl">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-2xl font-bold mb-2">Your CEU Credits</h2>
@@ -39,8 +39,8 @@ export default function CEUPage() {
           </div>
           <div className="w-24 h-24 bg-[#FDB913] rounded-full flex items-center justify-center">
             <div className="text-center">
-              <div className="text-3xl font-bold text-[#041E42]">{totalCEU}</div>
-              <div className="text-xs text-[#041E42]">Credits</div>
+              <div className="text-3xl font-bold text-[#000000]">{totalCEU}</div>
+              <div className="text-xs text-[#000000]">Credits</div>
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function CEUPage() {
         {totalCEU > 0 && (
           <button
             onClick={downloadCertificate}
-            className="mt-6 w-full md:w-auto px-8 py-3 bg-[#FDB913] text-[#041E42] rounded-lg font-bold hover:bg-[#f5c842] transition-colors flex items-center justify-center"
+            className="mt-6 w-full md:w-auto px-8 py-3 bg-[#FDB913] text-[#000000] rounded-lg font-bold hover:bg-[#f5c842] transition-colors flex items-center justify-center"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -93,7 +93,7 @@ export default function CEUPage() {
 
       {/* Sessions Checklist */}
       <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-2xl font-bold text-[#041E42] mb-4">Mark Attended Sessions</h2>
+        <h2 className="text-2xl font-bold text-[#000000] mb-4">Mark Attended Sessions</h2>
         <p className="text-sm text-gray-600 mb-6">
           Check the sessions you attended. {favorites.length > 0 && `Your favorited sessions (${favorites.length}) are highlighted.`}
         </p>
@@ -115,21 +115,21 @@ export default function CEUPage() {
                     type="checkbox"
                     checked={isAttended}
                     onChange={() => toggleAttended(session.id)}
-                    className="w-5 h-5 text-[#041E42] border-gray-300 rounded focus:ring-[#041E42] mt-1 mr-4 flex-shrink-0"
+                    className="w-5 h-5 text-[#000000] border-gray-300 rounded focus:ring-[#000000] mt-1 mr-4 flex-shrink-0"
                   />
                   <div className="flex-1">
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <h3 className="font-bold text-[#041E42] mb-1">{session.title}</h3>
+                        <h3 className="font-bold text-[#000000] mb-1">{session.title}</h3>
                         <div className="flex flex-wrap gap-2 mb-2">
-                          <span className="text-xs bg-[#041E42] text-white px-2 py-1 rounded">
+                          <span className="text-xs bg-[#000000] text-white px-2 py-1 rounded">
                             {session.track}
                           </span>
                           <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">
                             {new Date(session.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} • {session.startTime}
                           </span>
                           {isFavorited && (
-                            <span className="text-xs bg-[#FDB913] text-[#041E42] px-2 py-1 rounded flex items-center">
+                            <span className="text-xs bg-[#FDB913] text-[#000000] px-2 py-1 rounded flex items-center">
                               <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                               </svg>
@@ -140,7 +140,7 @@ export default function CEUPage() {
                         <p className="text-sm text-gray-600 mb-2">{session.room}</p>
                       </div>
                       <div className="ml-4 text-right flex-shrink-0">
-                        <div className="text-lg font-bold text-[#041E42]">{session.ceuCredits}</div>
+                        <div className="text-lg font-bold text-[#000000]">{session.ceuCredits}</div>
                         <div className="text-xs text-gray-600">CEU</div>
                       </div>
                     </div>
@@ -163,16 +163,16 @@ export default function CEUPage() {
       {/* Attended Sessions Summary */}
       {attendedSessionsList.length > 0 && (
         <div className="mt-8 bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-bold text-[#041E42] mb-4">Your Attended Sessions Summary</h2>
+          <h2 className="text-2xl font-bold text-[#000000] mb-4">Your Attended Sessions Summary</h2>
           <div className="space-y-2">
             {attendedSessionsList.map(session => (
               <div key={session.id} className="flex justify-between items-center border-b pb-2">
                 <span className="text-sm text-gray-700">{session.title}</span>
-                <span className="text-sm font-bold text-[#041E42]">{session.ceuCredits} CEU</span>
+                <span className="text-sm font-bold text-[#000000]">{session.ceuCredits} CEU</span>
               </div>
             ))}
             <div className="flex justify-between items-center pt-2 font-bold text-lg">
-              <span className="text-[#041E42]">Total CEU Credits:</span>
+              <span className="text-[#000000]">Total CEU Credits:</span>
               <span className="text-[#FDB913]">{totalCEU}</span>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function CEUPage() {
 
       {/* CEU Info */}
       <div className="mt-8 bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-bold text-[#041E42] mb-4">About CEU Credits</h2>
+        <h2 className="text-xl font-bold text-[#000000] mb-4">About CEU Credits</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <p>
             <strong>Continuing Education Units (CEUs)</strong> are offered for licensed social workers and other eligible professionals.

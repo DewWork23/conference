@@ -65,7 +65,7 @@ export default function PresenterPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-[#041E42] mb-2">Presenter Portal</h1>
+        <h1 className="text-4xl font-bold text-[#000000] mb-2">Presenter Portal</h1>
         <p className="text-gray-600">Manage your presentations and submit new abstracts</p>
       </div>
 
@@ -75,7 +75,7 @@ export default function PresenterPage() {
           onClick={() => setView('dashboard')}
           className={`px-6 py-3 rounded-lg font-medium transition-colors ${
             view === 'dashboard'
-              ? 'bg-[#041E42] text-white'
+              ? 'bg-[#000000] text-white'
               : 'bg-white text-gray-700 hover:bg-gray-100'
           } shadow-md`}
         >
@@ -85,7 +85,7 @@ export default function PresenterPage() {
           onClick={() => setView('submit')}
           className={`px-6 py-3 rounded-lg font-medium transition-colors ${
             view === 'submit'
-              ? 'bg-[#FDB913] text-[#041E42]'
+              ? 'bg-[#FDB913] text-[#000000]'
               : 'bg-white text-gray-700 hover:bg-gray-100'
           } shadow-md`}
         >
@@ -98,11 +98,11 @@ export default function PresenterPage() {
           {/* Presenter Info */}
           <div className="bg-white p-6 rounded-lg shadow-md mb-8">
             <div className="flex items-start gap-4">
-              <div className="w-20 h-20 bg-[#041E42] rounded-full flex items-center justify-center text-white text-3xl font-bold">
+              <div className="w-20 h-20 bg-[#000000] rounded-full flex items-center justify-center text-white text-3xl font-bold">
                 {currentPresenter.name.split(' ').map(n => n[0]).join('')}
               </div>
               <div className="flex-1">
-                <h2 className="text-2xl font-bold text-[#041E42] mb-1">{currentPresenter.name}</h2>
+                <h2 className="text-2xl font-bold text-[#000000] mb-1">{currentPresenter.name}</h2>
                 <p className="text-gray-600 mb-1">{currentPresenter.title}</p>
                 <p className="text-gray-600 mb-2">{currentPresenter.affiliation}</p>
                 <p className="text-sm text-gray-500">{currentPresenter.email}</p>
@@ -114,18 +114,18 @@ export default function PresenterPage() {
           </div>
 
           {/* Sessions */}
-          <h2 className="text-2xl font-bold text-[#041E42] mb-4">Your Scheduled Presentations</h2>
+          <h2 className="text-2xl font-bold text-[#000000] mb-4">Your Scheduled Presentations</h2>
           <div className="space-y-4">
             {presenterSessions.map(session => (
               <div key={session.id} className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-[#041E42] mb-2">{session.title}</h3>
+                    <h3 className="text-xl font-bold text-[#000000] mb-2">{session.title}</h3>
                     <div className="flex flex-wrap gap-2 mb-2">
-                      <span className="text-xs bg-[#041E42] text-white px-2 py-1 rounded">
+                      <span className="text-xs bg-[#000000] text-white px-2 py-1 rounded">
                         {session.track}
                       </span>
-                      <span className="text-xs bg-[#FDB913] text-[#041E42] px-2 py-1 rounded">
+                      <span className="text-xs bg-[#FDB913] text-[#000000] px-2 py-1 rounded">
                         {session.topic}
                       </span>
                     </div>
@@ -166,7 +166,7 @@ export default function PresenterPage() {
                 </div>
 
                 <div className="mt-4 flex gap-2">
-                  <button className="flex-1 px-4 py-2 bg-[#041E42] text-white rounded-md hover:bg-[#0A2F5F] transition-colors">
+                  <button className="flex-1 px-4 py-2 bg-[#000000] text-white rounded-md hover:bg-[#0A2F5F] transition-colors">
                     Upload Slides
                   </button>
                   <button className="flex-1 px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors">
@@ -179,7 +179,7 @@ export default function PresenterPage() {
         </div>
       ) : (
         <div className="bg-white p-8 rounded-lg shadow-md max-w-3xl">
-          <h2 className="text-2xl font-bold text-[#041E42] mb-6">Submit New Abstract</h2>
+          <h2 className="text-2xl font-bold text-[#000000] mb-6">Submit New Abstract</h2>
 
           {submitted ? (
             <div className="text-center py-12">
@@ -188,7 +188,7 @@ export default function PresenterPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-[#041E42] mb-2">Abstract Submitted!</h3>
+              <h3 className="text-2xl font-bold text-[#000000] mb-2">Abstract Submitted!</h3>
               <p className="text-gray-600">Your abstract has been received and will be reviewed by the program committee.</p>
               <p className="text-sm text-gray-500 mt-2">You will receive a confirmation email shortly.</p>
             </div>
@@ -203,7 +203,7 @@ export default function PresenterPage() {
                   required
                   value={formData.title}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#041E42] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
                   placeholder="Enter presentation title"
                 />
               </div>
@@ -217,7 +217,7 @@ export default function PresenterPage() {
                   rows={6}
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#041E42] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
                   placeholder="Describe your presentation, learning objectives, and key takeaways"
                 />
               </div>
@@ -232,7 +232,7 @@ export default function PresenterPage() {
                     required
                     value={formData.presenterName}
                     onChange={(e) => setFormData({ ...formData, presenterName: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#041E42] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
                   />
                 </div>
 
@@ -245,7 +245,7 @@ export default function PresenterPage() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#041E42] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
                   />
                 </div>
               </div>
@@ -259,7 +259,7 @@ export default function PresenterPage() {
                   required
                   value={formData.affiliation}
                   onChange={(e) => setFormData({ ...formData, affiliation: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#041E42] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
                   placeholder="University, agency, or organization"
                 />
               </div>
@@ -273,7 +273,7 @@ export default function PresenterPage() {
                     required
                     value={formData.topic}
                     onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#041E42] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
                   >
                     {topics.map(topic => (
                       <option key={topic} value={topic}>{topic}</option>
@@ -289,7 +289,7 @@ export default function PresenterPage() {
                     required
                     value={formData.track}
                     onChange={(e) => setFormData({ ...formData, track: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#041E42] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
                   >
                     {tracks.map(track => (
                       <option key={track} value={track}>{track}</option>
@@ -306,7 +306,7 @@ export default function PresenterPage() {
                   rows={3}
                   value={formData.bio}
                   onChange={(e) => setFormData({ ...formData, bio: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#041E42] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
                   placeholder="Brief professional biography"
                 />
               </div>
@@ -342,7 +342,7 @@ export default function PresenterPage() {
               <div className="flex gap-4 pt-4">
                 <button
                   type="submit"
-                  className="flex-1 px-6 py-3 bg-[#FDB913] text-[#041E42] rounded-md font-bold hover:bg-[#f5c842] transition-colors"
+                  className="flex-1 px-6 py-3 bg-[#FDB913] text-[#000000] rounded-md font-bold hover:bg-[#f5c842] transition-colors"
                 >
                   Submit Abstract
                 </button>

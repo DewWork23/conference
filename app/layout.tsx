@@ -26,7 +26,7 @@ export default function RootLayout({
           <main className="min-h-screen">
             {children}
           </main>
-          <footer className="bg-[#041E42] text-white py-8 mt-12">
+          <footer className="bg-[#000000] text-white py-8 mt-12">
             <div className="container mx-auto px-4 text-center">
               <p className="text-sm">© 2026 UNC Pembroke | Southeastern Social Work Conference</p>
               <p className="text-xs mt-2 text-gray-300">Demo prototype - no data persistence</p>
