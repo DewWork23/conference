@@ -159,7 +159,7 @@ export default function SchedulePage() {
               const session = timeslotSessions[0];
               return (
                 <div key={key}>
-                  <div className="bg-[#3E5C73] text-white px-6 py-3 rounded-t-lg border-l-4 border-[#947843]">
+                  <div className="bg-[#947843] text-white px-6 py-3 rounded-t-lg border-l-4 border-[#947843]">
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="font-bold text-lg tracking-wide">{formatDate(session.date)}</div>
@@ -167,7 +167,7 @@ export default function SchedulePage() {
                           {formatTime(session.startTime)} - {formatTime(session.endTime)}
                         </div>
                       </div>
-                      <div className="text-sm bg-[#947843] text-white px-3 py-1 rounded-full font-bold">
+                      <div className="text-sm bg-white text-[#947843] px-3 py-1 rounded-full font-bold">
                         {session.ceuCredits} CEU
                       </div>
                     </div>
@@ -179,10 +179,10 @@ export default function SchedulePage() {
                           <div className="flex-1">
                             <h3 className="text-lg font-bold text-[#3E5C73] mb-2 tracking-wide">{s.title}</h3>
                             <div className="flex flex-wrap gap-2 mb-2">
-                              <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
+                              <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">
                                 {s.track}
                               </span>
-                              <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">
+                              <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
                                 {s.topic}
                               </span>
                             </div>

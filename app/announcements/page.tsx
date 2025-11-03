@@ -83,7 +83,7 @@ export default function AnnouncementsPage() {
       </div>
 
       {/* Notification Bell Summary */}
-      <div className="bg-gradient-to-r from-[#3E5C73] to-[#947843] text-white rounded-lg p-6 mb-8 shadow-lg">
+      <div className="bg-gradient-to-r from-[#947843] to-[#DDB672] text-white rounded-lg p-6 mb-8 shadow-lg">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
@@ -162,7 +162,7 @@ export default function AnnouncementsPage() {
             <span className="ml-3 text-gray-700">Daily digest of all announcements</span>
           </label>
         </div>
-        <button className="mt-4 px-6 py-2 bg-[#947843] text-white rounded-md font-bold hover:bg-[#3E5C73] transition-colors duration-300 border-2 border-[#947843] shadow-lg">
+        <button className="mt-4 px-6 py-2 bg-[#947843] text-white rounded-md font-bold hover:bg-[#DDB672] transition-colors duration-300 border-2 border-[#947843] shadow-lg">
           Save Preferences
         </button>
       </div>

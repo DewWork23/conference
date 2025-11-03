@@ -70,13 +70,13 @@ export default function AdminPage() {
         <div>
           {/* Stats Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-[#3E5C73]">
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-[#947843]">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-gray-600 text-sm mb-1">Total Sessions</p>
-                  <p className="text-3xl font-bold text-[#3E5C73]">{stats.totalSessions}</p>
+                  <p className="text-3xl font-bold text-[#947843]">{stats.totalSessions}</p>
                 </div>
-                <svg className="w-12 h-12 text-[#3E5C73] opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-12 h-12 text-[#947843] opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
@@ -106,13 +106,13 @@ export default function AdminPage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-[#3E5C73]">
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-[#947843]">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-gray-600 text-sm mb-1">Announcements Sent</p>
-                  <p className="text-3xl font-bold text-[#3E5C73]">{stats.totalAnnouncements}</p>
+                  <p className="text-3xl font-bold text-[#947843]">{stats.totalAnnouncements}</p>
                 </div>
-                <svg className="w-12 h-12 text-[#3E5C73] opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-12 h-12 text-[#947843] opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
                 </svg>
               </div>
@@ -177,7 +177,7 @@ export default function AdminPage() {
         <div className="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-[#947843]">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gradient-to-r from-[#3E5C73] to-[#947843] text-white">
+              <thead className="bg-[#947843] text-white">
                 <tr>
                   <th className="px-6 py-3 text-left text-sm font-bold">Session Title</th>
                   <th className="px-6 py-3 text-left text-sm font-bold">Presenter</th>
@@ -198,7 +198,7 @@ export default function AdminPage() {
                     </td>
                     <td className="px-6 py-4 text-sm text-gray-600">{session.room.split(' - ')[1]}</td>
                     <td className="px-6 py-4">
-                      <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">{session.track}</span>
+                      <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">{session.track}</span>
                     </td>
                     <td className="px-6 py-4">
                       <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-semibold">Confirmed</span>
@@ -315,7 +315,7 @@ export default function AdminPage() {
             <button
               onClick={handleSendAnnouncement}
               disabled={!newAnnouncement.title || !newAnnouncement.content}
-              className="w-full px-6 py-3 bg-[#947843] text-white rounded-md font-bold hover:bg-[#3E5C73] transition-colors duration-300 border-2 border-[#947843] shadow-lg disabled:bg-gray-300 disabled:cursor-not-allowed disabled:border-gray-300"
+              className="w-full px-6 py-3 bg-[#947843] text-white rounded-md font-bold hover:bg-[#DDB672] transition-colors duration-300 border-2 border-[#947843] shadow-lg disabled:bg-gray-300 disabled:cursor-not-allowed disabled:border-gray-300"
             >
               Send Announcement
             </button>

@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#3E5C73] to-[#947843] text-white rounded-lg p-12 mb-12 shadow-xl border-l-4 border-[#947843]">
+      <div className="bg-gradient-to-r from-[#947843] to-[#DDB672] text-white rounded-lg p-12 mb-12 shadow-xl border-l-4 border-[#947843]">
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-black mb-4 leading-tight tracking-tight">Voices from the Field</h1>
           <p className="text-2xl mb-6 text-[#DDB672] font-semibold tracking-wide">Southeastern Social Work Conference</p>
@@ -30,7 +30,7 @@ export default function Home() {
           </p>
           <Link
             href="/schedule"
-            className="inline-block bg-[#947843] text-white rounded-md shadow-lg px-8 py-3 text-lg font-semibold hover:bg-[#3E5C73] transition-colors duration-300 tracking-wide border-2 border-[#947843]"
+            className="inline-block bg-[#947843] text-white rounded-md shadow-lg px-8 py-3 text-lg font-semibold hover:bg-[#DDB672] transition-colors duration-300 tracking-wide border-2 border-[#947843]"
           >
             View Schedule
           </Link>

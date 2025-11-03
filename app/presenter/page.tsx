@@ -122,10 +122,10 @@ export default function PresenterPage() {
                   <div>
                     <h3 className="text-lg font-bold text-[#3E5C73] mb-2 tracking-wide">{session.title}</h3>
                     <div className="flex flex-wrap gap-2 mb-2">
-                      <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
+                      <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">
                         {session.track}
                       </span>
-                      <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">
+                      <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
                         {session.topic}
                       </span>
                     </div>
@@ -166,7 +166,7 @@ export default function PresenterPage() {
                 </div>
 
                 <div className="mt-4 flex gap-2">
-                  <button className="flex-1 px-4 py-2 bg-[#947843] text-white rounded-md font-semibold hover:bg-[#3E5C73] transition-colors duration-300 border-2 border-[#947843]">
+                  <button className="flex-1 px-4 py-2 bg-[#947843] text-white rounded-md font-semibold hover:bg-[#DDB672] transition-colors duration-300 border-2 border-[#947843]">
                     Upload Slides
                   </button>
                   <button className="flex-1 px-4 py-2 bg-white text-gray-700 rounded-md font-semibold hover:bg-gray-100 transition-colors duration-300 border-2 border-gray-300">
@@ -342,7 +342,7 @@ export default function PresenterPage() {
               <div className="flex gap-4 pt-4">
                 <button
                   type="submit"
-                  className="flex-1 px-6 py-3 bg-[#947843] text-white rounded-md font-bold hover:bg-[#3E5C73] transition-colors duration-300 border-2 border-[#947843] shadow-lg"
+                  className="flex-1 px-6 py-3 bg-[#947843] text-white rounded-md font-bold hover:bg-[#DDB672] transition-colors duration-300 border-2 border-[#947843] shadow-lg"
                 >
                   Submit Abstract
                 </button>

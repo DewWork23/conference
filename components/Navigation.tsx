@@ -20,7 +20,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-[#3E5C73] text-white shadow-lg sticky top-0 z-50 border-b-4 border-[#947843]">
+    <nav className="bg-white shadow-lg sticky top-0 z-50 border-b-4 border-[#947843]">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center space-x-3">
@@ -28,8 +28,8 @@ export default function Navigation() {
               SW
             </div>
             <div>
-              <div className="font-bold text-lg tracking-wide">Southeastern Social Work</div>
-              <div className="text-xs text-gray-200">Voices from the Field 2026</div>
+              <div className="font-bold text-lg tracking-wide text-black">Southeastern Social Work</div>
+              <div className="text-xs text-gray-600">Voices from the Field 2026</div>
             </div>
           </Link>
 
@@ -42,7 +42,7 @@ export default function Navigation() {
                 className={`px-3 py-2 rounded-md text-sm font-bold transition-all duration-300 border-2 ${
                   pathname === link.href
                     ? 'bg-[#947843] text-white border-[#947843]'
-                    : 'text-white border-transparent hover:border-[#DDB672] hover:bg-[#947843]/20'
+                    : 'text-black border-transparent hover:border-[#947843] hover:bg-gray-50'
                 }`}
               >
                 {link.label}
@@ -52,7 +52,7 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-black"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,7 +75,7 @@ export default function Navigation() {
                 className={`block px-3 py-2 rounded-md text-sm font-bold transition-all duration-300 border-2 ${
                   pathname === link.href
                     ? 'bg-[#947843] text-white border-[#947843]'
-                    : 'text-white border-transparent hover:border-[#DDB672] hover:bg-[#947843]/20'
+                    : 'text-black border-transparent hover:border-[#947843] hover:bg-gray-50'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >

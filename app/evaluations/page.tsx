@@ -106,7 +106,7 @@ export default function EvaluationsPage() {
                       <h3 className="text-lg font-bold text-[#3E5C73] tracking-wide mb-2">{s.title}</h3>
                       <p className="text-sm text-gray-600 mb-2">{p?.name}</p>
                       <div className="flex flex-wrap gap-2">
-                        <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
+                        <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">
                           {s.track}
                         </span>
                         <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">
@@ -125,7 +125,7 @@ export default function EvaluationsPage() {
                   </div>
                   <button
                     onClick={() => setSelectedSession(s.id)}
-                    className="w-full mt-3 px-4 py-2 bg-[#947843] text-white rounded-md font-bold hover:bg-[#3E5C73] transition-colors duration-300 border-2 border-[#947843] shadow-lg"
+                    className="w-full mt-3 px-4 py-2 bg-[#947843] text-white rounded-md font-bold hover:bg-[#DDB672] transition-colors duration-300 border-2 border-[#947843] shadow-lg"
                   >
                     Evaluate Session
                   </button>
@@ -153,10 +153,10 @@ export default function EvaluationsPage() {
             <h2 className="text-2xl font-bold text-[#947843] tracking-wide mb-2">{session?.title}</h2>
             <p className="text-gray-600">{presenter?.name} • {presenter?.affiliation}</p>
             <div className="flex gap-2 mt-2">
-              <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
+              <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">
                 {session?.track}
               </span>
-              <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">
+              <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
                 {session?.topic}
               </span>
             </div>
@@ -246,7 +246,7 @@ export default function EvaluationsPage() {
             <div className="flex gap-4">
               <button
                 type="submit"
-                className="flex-1 px-6 py-3 bg-[#947843] text-white rounded-md font-bold hover:bg-[#3E5C73] transition-colors duration-300 border-2 border-[#947843] shadow-lg"
+                className="flex-1 px-6 py-3 bg-[#947843] text-white rounded-md font-bold hover:bg-[#DDB672] transition-colors duration-300 border-2 border-[#947843] shadow-lg"
               >
                 Submit Evaluation
               </button>

@@ -31,7 +31,7 @@ export default function CEUPage() {
       </div>
 
       {/* CEU Summary Card */}
-      <div className="bg-gradient-to-r from-[#3E5C73] to-[#947843] text-white rounded-lg p-8 mb-8 shadow-xl">
+      <div className="bg-gradient-to-r from-[#947843] to-[#DDB672] text-white rounded-lg p-8 mb-8 shadow-xl">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-2xl font-bold mb-2">Your CEU Credits</h2>
@@ -122,7 +122,7 @@ export default function CEUPage() {
                       <div className="flex-1">
                         <h3 className="text-lg font-bold text-[#3E5C73] tracking-wide mb-1">{session.title}</h3>
                         <div className="flex flex-wrap gap-2 mb-2">
-                          <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
+                          <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">
                             {session.track}
                           </span>
                           <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">
