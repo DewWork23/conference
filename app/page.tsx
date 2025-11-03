@@ -7,7 +7,7 @@ export default function Home() {
       <div className="bg-white text-black rounded-lg p-12 mb-12 shadow-xl border-l-4 border-[#947843]">
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-black mb-4 leading-tight tracking-tight">Voices from the Field</h1>
-          <p className="text-2xl mb-6 text-[#DDB672] font-semibold tracking-wide">Southeastern Social Work Conference</p>
+          <p className="text-2xl mb-6 text-[#947843] font-bold tracking-wide">Southeastern Social Work Conference</p>
           <div className="flex flex-wrap gap-6 text-lg mb-6">
             <div className="flex items-center">
               <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
