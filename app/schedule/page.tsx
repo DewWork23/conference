@@ -51,8 +51,8 @@ export default function SchedulePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-[#FDB913] mb-2">Conference Schedule</h1>
-        <p className="text-[#FDB913]">Browse sessions and build your personal agenda</p>
+        <h1 className="text-5xl md:text-6xl font-black text-[#947843] mb-2 leading-tight tracking-tight">Conference Schedule</h1>
+        <p className="text-xl text-[#3E5C73] font-semibold tracking-wide">Browse sessions and build your personal agenda</p>
       </div>
 
       {/* Filters */}
@@ -63,20 +63,20 @@ export default function SchedulePage() {
             <div className="flex gap-2">
               <button
                 onClick={() => setViewMode('all')}
-                className={`flex-1 px-4 py-2 rounded-md font-medium transition-colors ${
+                className={`flex-1 px-4 py-2 rounded-md font-bold transition-all duration-300 border-2 ${
                   viewMode === 'all'
-                    ? 'bg-[#000000] text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-[#947843] text-white border-[#947843]'
+                    : 'bg-gray-100 text-gray-700 border-transparent hover:border-[#DDB672]'
                 }`}
               >
                 All Sessions
               </button>
               <button
                 onClick={() => setViewMode('favorites')}
-                className={`flex-1 px-4 py-2 rounded-md font-medium transition-colors ${
+                className={`flex-1 px-4 py-2 rounded-md font-bold transition-all duration-300 border-2 ${
                   viewMode === 'favorites'
-                    ? 'bg-[#FDB913] text-black'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-[#947843] text-white border-[#947843]'
+                    : 'bg-gray-100 text-gray-700 border-transparent hover:border-[#DDB672]'
                 }`}
               >
                 My Agenda ({favorites.length})
@@ -89,7 +89,7 @@ export default function SchedulePage() {
             <select
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#947843] focus:border-transparent"
             >
               <option value="all">All Days</option>
               <option value="2026-03-26">Day 1 - March 26</option>
@@ -102,7 +102,7 @@ export default function SchedulePage() {
             <select
               value={selectedTrack}
               onChange={(e) => setSelectedTrack(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#947843] focus:border-transparent"
             >
               <option value="all">All Tracks</option>
               {tracks.map(track => (
@@ -116,7 +116,7 @@ export default function SchedulePage() {
             <select
               value={selectedTopic}
               onChange={(e) => setSelectedTopic(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#947843] focus:border-transparent"
             >
               <option value="all">All Topics</option>
               {topics.map(topic => (
@@ -133,7 +133,7 @@ export default function SchedulePage() {
               setSelectedTrack('all');
               setSelectedTopic('all');
             }}
-            className="text-sm text-black hover:underline"
+            className="text-sm text-[#947843] hover:underline font-semibold"
           >
             Clear all filters
           </button>
@@ -159,30 +159,30 @@ export default function SchedulePage() {
               const session = timeslotSessions[0];
               return (
                 <div key={key}>
-                  <div className="bg-[#000000] text-white px-6 py-3 rounded-t-lg">
+                  <div className="bg-[#3E5C73] text-white px-6 py-3 rounded-t-lg border-l-4 border-[#947843]">
                     <div className="flex items-center justify-between">
                       <div>
-                        <div className="font-bold text-lg">{formatDate(session.date)}</div>
-                        <div className="text-sm text-gray-300">
+                        <div className="font-bold text-lg tracking-wide">{formatDate(session.date)}</div>
+                        <div className="text-sm text-gray-200">
                           {formatTime(session.startTime)} - {formatTime(session.endTime)}
                         </div>
                       </div>
-                      <div className="text-sm bg-[#FDB913] text-black px-3 py-1 rounded-full font-medium">
+                      <div className="text-sm bg-[#947843] text-white px-3 py-1 rounded-full font-bold">
                         {session.ceuCredits} CEU
                       </div>
                     </div>
                   </div>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 bg-gray-100 p-4 rounded-b-lg">
                     {timeslotSessions.map(s => (
-                      <div key={s.id} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                      <div key={s.id} className="bg-gray-50 p-6 rounded-md shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-[#947843] hover:border-[#3E5C73]">
                         <div className="flex justify-between items-start mb-3">
                           <div className="flex-1">
-                            <h3 className="text-xl font-bold text-black mb-2">{s.title}</h3>
+                            <h3 className="text-lg font-bold text-[#3E5C73] mb-2 tracking-wide">{s.title}</h3>
                             <div className="flex flex-wrap gap-2 mb-2">
-                              <span className="text-xs bg-[#000000] text-white px-2 py-1 rounded">
+                              <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
                                 {s.track}
                               </span>
-                              <span className="text-xs bg-[#FDB913] text-black px-2 py-1 rounded">
+                              <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">
                                 {s.topic}
                               </span>
                             </div>
@@ -193,7 +193,7 @@ export default function SchedulePage() {
                             title={isFavorite(s.id) ? 'Remove from agenda' : 'Add to agenda'}
                           >
                             <svg
-                              className={`w-6 h-6 ${isFavorite(s.id) ? 'text-[#FDB913] fill-current' : 'text-gray-400'}`}
+                              className={`w-6 h-6 ${isFavorite(s.id) ? 'text-[#947843] fill-current' : 'text-gray-400'}`}
                               fill={isFavorite(s.id) ? 'currentColor' : 'none'}
                               stroke="currentColor"
                               viewBox="0 0 24 24"

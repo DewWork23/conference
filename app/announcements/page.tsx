@@ -25,9 +25,9 @@ export default function AnnouncementsPage() {
       case 'high':
         return 'border-red-500 bg-red-50';
       case 'normal':
-        return 'border-blue-500 bg-blue-50';
+        return 'border-[#947843] bg-gray-50';
       case 'low':
-        return 'border-gray-500 bg-gray-50';
+        return 'border-[#3E5C73] bg-gray-50';
       default:
         return 'border-gray-500 bg-gray-50';
     }
@@ -43,13 +43,13 @@ export default function AnnouncementsPage() {
         );
       case 'normal':
         return (
-          <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 text-[#947843]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         );
       case 'low':
         return (
-          <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 text-[#3E5C73]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
           </svg>
         );
@@ -61,11 +61,11 @@ export default function AnnouncementsPage() {
   const getPriorityLabel = (priority: string) => {
     switch (priority) {
       case 'high':
-        return <span className="text-xs bg-red-600 text-white px-2 py-1 rounded-full font-medium">Important</span>;
+        return <span className="text-xs bg-red-600 text-white px-2 py-1 rounded-full font-semibold">Important</span>;
       case 'normal':
-        return <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full font-medium">Info</span>;
+        return <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded-full font-semibold">Info</span>;
       case 'low':
-        return <span className="text-xs bg-gray-600 text-white px-2 py-1 rounded-full font-medium">Note</span>;
+        return <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded-full font-semibold">Note</span>;
       default:
         return null;
     }
@@ -78,27 +78,27 @@ export default function AnnouncementsPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-[#FDB913] mb-2">Conference Announcements</h1>
-        <p className="text-[#FDB913]">Stay updated with the latest news and important information</p>
+        <h1 className="text-5xl md:text-6xl font-black text-[#947843] leading-tight tracking-tight mb-2">Conference Announcements</h1>
+        <p className="text-xl text-[#3E5C73] font-semibold tracking-wide">Stay updated with the latest news and important information</p>
       </div>
 
       {/* Notification Bell Summary */}
-      <div className="bg-gradient-to-r from-[#000000] to-[#0A2F5F] text-white rounded-lg p-6 mb-8 shadow-lg">
+      <div className="bg-gradient-to-r from-[#3E5C73] to-[#947843] text-white rounded-lg p-6 mb-8 shadow-lg">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <div className="w-12 h-12 bg-[#FDB913] rounded-full flex items-center justify-center mr-4">
-              <svg className="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+              <svg className="w-7 h-7 text-[#947843]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
               </svg>
             </div>
             <div>
               <h2 className="text-xl font-bold">Latest Updates</h2>
-              <p className="text-sm text-gray-300">{announcements.length} announcements • Last updated: {formatTimestamp(sortedAnnouncements[0].timestamp)}</p>
+              <p className="text-sm text-gray-200">{announcements.length} announcements • Last updated: {formatTimestamp(sortedAnnouncements[0].timestamp)}</p>
             </div>
           </div>
           <div className="text-right">
             <div className="text-3xl font-bold">{announcements.filter(a => a.priority === 'high').length}</div>
-            <div className="text-sm text-gray-300">Important</div>
+            <div className="text-sm text-gray-200">Important</div>
           </div>
         </div>
       </div>
@@ -108,7 +108,7 @@ export default function AnnouncementsPage() {
         {sortedAnnouncements.map((announcement, index) => (
           <div
             key={announcement.id}
-            className={`border-l-4 ${getPriorityColor(announcement.priority)} rounded-lg shadow-md hover:shadow-lg transition-shadow`}
+            className={`border-l-4 ${getPriorityColor(announcement.priority)} rounded-lg shadow-md hover:shadow-xl transition-all duration-300`}
           >
             <div className="p-6">
               <div className="flex items-start">
@@ -117,7 +117,7 @@ export default function AnnouncementsPage() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-bold text-black">{announcement.title}</h3>
+                    <h3 className="text-lg font-bold text-[#3E5C73] tracking-wide">{announcement.title}</h3>
                     {getPriorityLabel(announcement.priority)}
                   </div>
                   <p className="text-gray-700 mb-3">{announcement.content}</p>
@@ -135,14 +135,14 @@ export default function AnnouncementsPage() {
       </div>
 
       {/* Mock notification settings */}
-      <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
-        <h3 className="text-lg font-bold text-black mb-4">Notification Preferences</h3>
+      <div className="mt-12 bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-[#947843]">
+        <h3 className="text-lg font-bold text-[#3E5C73] tracking-wide mb-4">Notification Preferences</h3>
         <div className="space-y-3">
           <label className="flex items-center">
             <input
               type="checkbox"
               defaultChecked
-              className="w-4 h-4 text-black border-gray-300 rounded focus:ring-[#000000]"
+              className="w-4 h-4 text-[#947843] border-gray-300 rounded focus:ring-[#947843]"
             />
             <span className="ml-3 text-gray-700">Email notifications for important announcements</span>
           </label>
@@ -150,19 +150,19 @@ export default function AnnouncementsPage() {
             <input
               type="checkbox"
               defaultChecked
-              className="w-4 h-4 text-black border-gray-300 rounded focus:ring-[#000000]"
+              className="w-4 h-4 text-[#947843] border-gray-300 rounded focus:ring-[#947843]"
             />
             <span className="ml-3 text-gray-700">Push notifications for schedule changes</span>
           </label>
           <label className="flex items-center">
             <input
               type="checkbox"
-              className="w-4 h-4 text-black border-gray-300 rounded focus:ring-[#000000]"
+              className="w-4 h-4 text-[#947843] border-gray-300 rounded focus:ring-[#947843]"
             />
             <span className="ml-3 text-gray-700">Daily digest of all announcements</span>
           </label>
         </div>
-        <button className="mt-4 px-6 py-2 bg-[#000000] text-white rounded-md hover:bg-[#0A2F5F] transition-colors">
+        <button className="mt-4 px-6 py-2 bg-[#947843] text-white rounded-md font-bold hover:bg-[#3E5C73] transition-colors duration-300 border-2 border-[#947843] shadow-lg">
           Save Preferences
         </button>
       </div>

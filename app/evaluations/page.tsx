@@ -52,7 +52,7 @@ export default function EvaluationsPage() {
             onClick={() => onChange(rating)}
             className={`w-12 h-12 rounded-full font-bold transition-colors ${
               value >= rating
-                ? 'bg-[#FDB913] text-black'
+                ? 'bg-[#947843] text-white'
                 : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
             }`}
           >
@@ -75,38 +75,38 @@ export default function EvaluationsPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-[#FDB913] mb-2">Session Evaluations</h1>
-        <p className="text-[#FDB913]">Help us improve future conferences with your feedback</p>
+        <h1 className="text-5xl md:text-6xl font-black text-[#947843] leading-tight tracking-tight mb-2">Session Evaluations</h1>
+        <p className="text-xl text-[#3E5C73] font-semibold tracking-wide">Help us improve future conferences with your feedback</p>
       </div>
 
       {!selectedSession ? (
         <div>
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8">
+          <div className="bg-gray-50 border-l-4 border-[#947843] p-4 mb-8 shadow-md hover:shadow-xl transition-all duration-300">
             <div className="flex items-start">
-              <svg className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-[#947843] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <div>
-                <h3 className="font-bold text-blue-900 mb-1">Complete evaluations to receive CEU credits</h3>
-                <p className="text-sm text-blue-800">
+                <h3 className="text-lg font-bold text-[#3E5C73] tracking-wide mb-1">Complete evaluations to receive CEU credits</h3>
+                <p className="text-sm text-gray-700">
                   You must complete an evaluation for each session you attend. Scan the QR code in each room or select a session below.
                 </p>
               </div>
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-black mb-4">Select a Session to Evaluate</h2>
+          <h2 className="text-2xl font-bold text-[#947843] tracking-wide mb-4">Select a Session to Evaluate</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {sessions.map(s => {
               const p = presenters.find(pr => pr.id === s.presenterId);
               return (
-                <div key={s.id} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div key={s.id} className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-[#947843] hover:border-[#3E5C73]">
                   <div className="flex justify-between items-start mb-3">
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-black mb-2">{s.title}</h3>
+                      <h3 className="text-lg font-bold text-[#3E5C73] tracking-wide mb-2">{s.title}</h3>
                       <p className="text-sm text-gray-600 mb-2">{p?.name}</p>
                       <div className="flex flex-wrap gap-2">
-                        <span className="text-xs bg-[#000000] text-white px-2 py-1 rounded">
+                        <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
                           {s.track}
                         </span>
                         <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">
@@ -118,14 +118,14 @@ export default function EvaluationsPage() {
                       <img
                         src={getQRCodeUrl(s.id)}
                         alt="QR Code"
-                        className="w-16 h-16 border-2 border-gray-200 rounded"
+                        className="w-16 h-16 border-2 border-[#947843] rounded"
                         title={`Scan to evaluate: ${s.title}`}
                       />
                     </div>
                   </div>
                   <button
                     onClick={() => setSelectedSession(s.id)}
-                    className="w-full mt-3 px-4 py-2 bg-[#000000] text-white rounded-md hover:bg-[#0A2F5F] transition-colors"
+                    className="w-full mt-3 px-4 py-2 bg-[#947843] text-white rounded-md font-bold hover:bg-[#3E5C73] transition-colors duration-300 border-2 border-[#947843] shadow-lg"
                   >
                     Evaluate Session
                   </button>
@@ -141,7 +141,7 @@ export default function EvaluationsPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-black mb-2">Thank You!</h3>
+          <h3 className="text-2xl font-bold text-[#947843] tracking-wide mb-2">Thank You!</h3>
           <p className="text-gray-600 mb-4">Your evaluation has been submitted successfully.</p>
           <p className="text-sm text-gray-500">
             Your feedback helps presenters improve and assists us in planning future conferences.
@@ -150,13 +150,13 @@ export default function EvaluationsPage() {
       ) : (
         <div className="bg-white p-8 rounded-lg shadow-md max-w-3xl mx-auto">
           <div className="mb-6 pb-6 border-b">
-            <h2 className="text-2xl font-bold text-black mb-2">{session?.title}</h2>
+            <h2 className="text-2xl font-bold text-[#947843] tracking-wide mb-2">{session?.title}</h2>
             <p className="text-gray-600">{presenter?.name} • {presenter?.affiliation}</p>
             <div className="flex gap-2 mt-2">
-              <span className="text-xs bg-[#000000] text-white px-2 py-1 rounded">
+              <span className="text-xs bg-[#3E5C73] text-white px-2 py-1 rounded font-semibold">
                 {session?.track}
               </span>
-              <span className="text-xs bg-[#FDB913] text-black px-2 py-1 rounded">
+              <span className="text-xs bg-[#947843] text-white px-2 py-1 rounded font-semibold">
                 {session?.topic}
               </span>
             </div>
@@ -210,7 +210,7 @@ export default function EvaluationsPage() {
                   rows={4}
                   value={formData.strengths}
                   onChange={(e) => setFormData({ ...formData, strengths: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#947843] focus:border-transparent"
                   placeholder="What did you find most valuable or effective?"
                 />
               </div>
@@ -223,7 +223,7 @@ export default function EvaluationsPage() {
                   rows={4}
                   value={formData.improvements}
                   onChange={(e) => setFormData({ ...formData, improvements: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#000000] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#947843] focus:border-transparent"
                   placeholder="Suggestions for improvement"
                 />
               </div>
@@ -234,7 +234,7 @@ export default function EvaluationsPage() {
                     type="checkbox"
                     checked={formData.recommend}
                     onChange={(e) => setFormData({ ...formData, recommend: e.target.checked })}
-                    className="w-4 h-4 text-black border-gray-300 rounded focus:ring-[#000000]"
+                    className="w-4 h-4 text-[#947843] border-gray-300 rounded focus:ring-[#947843]"
                   />
                   <span className="ml-2 text-sm text-gray-700">
                     I would recommend this session to colleagues
@@ -246,7 +246,7 @@ export default function EvaluationsPage() {
             <div className="flex gap-4">
               <button
                 type="submit"
-                className="flex-1 px-6 py-3 bg-[#FDB913] text-black rounded-md font-bold hover:bg-[#f5c842] transition-colors"
+                className="flex-1 px-6 py-3 bg-[#947843] text-white rounded-md font-bold hover:bg-[#3E5C73] transition-colors duration-300 border-2 border-[#947843] shadow-lg"
               >
                 Submit Evaluation
               </button>
