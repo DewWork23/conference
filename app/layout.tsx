@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={`${poppins.className} antialiased bg-gray-50`}>
         <FavoritesProvider>
           <Navigation />
-          <main className="min-h-screen">
+          <main className="min-h-screen pt-32">
             {children}
           </main>
           <footer className="bg-white py-8 mt-12 border-t-4 border-[#947843]">
