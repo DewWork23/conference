@@ -50,6 +50,7 @@ export default function Navigation() {
     { name: 'CEU Tracking', path: '/ceu', keywords: ['ceu', 'credits', 'continuing education'] },
     { name: 'Network', path: '/networking', keywords: ['network', 'attendees', 'connect'] },
     { name: 'Admin', path: '/admin', keywords: ['admin', 'dashboard', 'management'] },
+    { name: 'Navigation Features (Planning)', path: '/navigation-features', keywords: ['navigation', 'features', 'planning', 'buildings', 'parking', 'gps'] },
   ];
 
   // Search logic
@@ -415,6 +416,15 @@ export default function Navigation() {
                 className="block px-6 py-4 font-bold text-lg text-black hover:bg-[#DDB672]/20 border-l-4 border-transparent hover:border-[#947843] transition-all"
               >
                 Admin
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/navigation-features"
+                onClick={() => setMenuOpen(false)}
+                className="block px-6 py-4 font-bold text-lg text-black hover:bg-[#DDB672]/20 border-l-4 border-transparent hover:border-[#947843] transition-all"
+              >
+                Navigation Features (Planning)
               </Link>
             </li>
           </ul>
