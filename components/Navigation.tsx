@@ -120,7 +120,7 @@ export default function Navigation() {
               {/* Conference Logo */}
               <Link href="/">
                 <img
-                  src="/Primary Horizontal_wg_RGB.png"
+                  src="/Primary_Horizontal_wg_RGB.png"
                   alt="UNC Pembroke Logo"
                   className="h-14 w-auto"
                 />
@@ -268,7 +268,7 @@ export default function Navigation() {
             <div className="flex justify-center">
               <Link href="/">
                 <img
-                  src="/Primary Horizontal_wg_RGB.png"
+                  src="/Primary_Horizontal_wg_RGB.png"
                   alt="UNC Pembroke Logo"
                   className="h-16 w-auto"
                 />
