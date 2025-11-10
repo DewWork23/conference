@@ -7,22 +7,41 @@ export default function NavigationFeaturesPage() {
       <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
         <h2 className="text-3xl font-bold mb-4 text-[#947843]">Conference Parking</h2>
 
-        {/* Quick Navigation Link */}
+        {/* Quick Navigation Links */}
         <div className="bg-[#947843] text-white rounded-lg p-6 mb-6 text-center">
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=MRQ2%2B862,+Pembroke,+NC+28372"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-[#947843] px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            Navigate to Conference Parking
-          </a>
-          <p className="text-sm mt-3 text-white/90">
-            Click to open Google Maps with directions to the conference parking area
+          <div className="mb-4">
+            <p className="text-sm font-semibold mb-3">Step 1: Drive to Parking</p>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=MRQ2%2B862,+Pembroke,+NC+28372"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-[#947843] px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Navigate to Conference Parking
+            </a>
+          </div>
+
+          <div className="border-t border-white/30 pt-4 mt-4">
+            <p className="text-sm font-semibold mb-3">Step 2: Walk to Building</p>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&origin=MRQ2%2B862,+Pembroke,+NC+28372&destination=University+Center+Annex,+UNCP,+Pembroke,+NC&travelmode=walking"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-[#947843] px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              Walking Directions to Conference Building
+            </a>
+          </div>
+
+          <p className="text-sm mt-4 text-white/90">
+            Follow both steps: drive to parking, then walk to the conference venue
           </p>
         </div>
 
