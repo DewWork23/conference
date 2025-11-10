@@ -4,6 +4,9 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 
+// Base path for production (GitHub Pages)
+const basePath = process.env.NODE_ENV === 'production' ? '/conference' : '';
+
 export default function Navigation() {
   const pathname = usePathname();
   const router = useRouter();
@@ -120,7 +123,7 @@ export default function Navigation() {
               {/* Conference Logo */}
               <Link href="/">
                 <img
-                  src="/Primary_Horizontal_wg_RGB.png"
+                  src={`${basePath}/Primary_Horizontal_wg_RGB.png`}
                   alt="UNC Pembroke Logo"
                   className="h-14 w-auto"
                 />
@@ -268,7 +271,7 @@ export default function Navigation() {
             <div className="flex justify-center">
               <Link href="/">
                 <img
-                  src="/Primary_Horizontal_wg_RGB.png"
+                  src={`${basePath}/Primary_Horizontal_wg_RGB.png`}
                   alt="UNC Pembroke Logo"
                   className="h-16 w-auto"
                 />
