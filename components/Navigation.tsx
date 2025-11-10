@@ -122,7 +122,7 @@ export default function Navigation() {
                 <div className="flex items-center space-x-3">
                   <img
                     src="/Primary Horizontal_wg_RGB.png"
-                    alt="SPARC Logo"
+                    alt="UNC Pembroke Logo"
                     className="h-14 w-auto"
                   />
                   <div>
@@ -276,7 +276,7 @@ export default function Navigation() {
                 <div className="flex items-center space-x-3">
                   <img
                     src="/Primary Horizontal_wg_RGB.png"
-                    alt="SPARC Logo"
+                    alt="UNC Pembroke Logo"
                     className="h-16 w-auto"
                   />
                   <div>
