@@ -1,18 +1,42 @@
 export default function NavigationFeaturesPage() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8 text-[#947843]">Conference Navigation Features - Planning Document</h1>
+      <h1 className="text-4xl font-bold mb-8 text-[#947843]">Directions & Parking</h1>
 
+      {/* GPS Parking - Moved to top */}
       <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-        <p className="text-gray-600 mb-4">
-          <strong>Purpose:</strong> This document outlines potential navigation features to help conference attendees
-          and presenters find their way around the venue.
-        </p>
+        <h2 className="text-3xl font-bold mb-4 text-[#947843]">Conference Parking</h2>
+
+        {/* Quick Navigation Link */}
+        <div className="bg-[#947843] text-white rounded-lg p-6 mb-6 text-center">
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=MRQ2+862,+Pembroke,+NC+28372"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white text-[#947843] px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Navigate to Conference Parking
+          </a>
+          <p className="text-sm mt-3 text-white/90">
+            Click to open Google Maps with directions to the conference parking area
+          </p>
+        </div>
+
+        <div className="mb-6">
+          <h3 className="text-xl font-semibold mb-2">About Conference Parking</h3>
+          <p className="text-gray-700 mb-2">
+            Use the button above to navigate directly to the conference parking area. GPS coordinates ensure you arrive at the correct entrance on campus.
+          </p>
+        </div>
       </div>
 
       {/* Building Navigation */}
       <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-        <h2 className="text-3xl font-bold mb-4 text-[#947843]">1. Building-to-Building Navigation</h2>
+        <h2 className="text-3xl font-bold mb-4 text-[#947843]">Building-to-Building Navigation</h2>
 
         <div className="mb-6">
           <h3 className="text-xl font-semibold mb-2">The Challenge</h3>
@@ -84,136 +108,7 @@ export default function NavigationFeaturesPage() {
         </div>
       </div>
 
-      {/* GPS Parking */}
-      <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-        <h2 className="text-3xl font-bold mb-4 text-[#947843]">2. GPS Coordinates for Parking</h2>
-
-        {/* Quick Navigation Link */}
-        <div className="bg-[#947843] text-white rounded-lg p-6 mb-6 text-center">
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=MRQ2+862,+Pembroke,+NC+28372"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-[#947843] px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            Navigate to Conference Parking
-          </a>
-        </div>
-
-        <div className="mb-6">
-          <h3 className="text-xl font-semibold mb-2">The Challenge</h3>
-          <p className="text-gray-700 mb-2">
-            Some parking locations (especially presenter parking) cannot be found reliably using building addresses
-            in GPS systems. Navigation apps may route people to the wrong entrance or general campus area.
-          </p>
-        </div>
-
-        <div className="mb-6">
-          <h3 className="text-xl font-semibold mb-2">Proposed Solution</h3>
-          <p className="text-gray-700 mb-4">
-            Provide exact GPS coordinates (latitude/longitude) for specific parking areas that can be entered
-            directly into any navigation app.
-          </p>
-
-          <div className="mb-4">
-            <h4 className="text-lg font-semibold text-[#3E5C73] mb-2">Implementation Options</h4>
-
-            <p className="font-semibold mb-2">Option A: Parking Information Page (/parking or /directions)</p>
-            <ul className="list-disc ml-6 text-gray-700 space-y-1 mb-4">
-              <li>List different parking areas with categories:
-                <ul className="list-circle ml-6 mt-1">
-                  <li>Presenter Parking</li>
-                  <li>General Attendee Parking</li>
-                  <li>Accessible Parking</li>
-                  <li>Overflow Parking</li>
-                </ul>
-              </li>
-              <li>For each parking area, provide:
-                <ul className="list-circle ml-6 mt-1">
-                  <li>Name and description</li>
-                  <li>Exact GPS coordinates (latitude, longitude)</li>
-                  <li>One-click "Navigate Here" buttons for Google Maps and Apple Maps</li>
-                  <li>Optional: What3Words address for even more precision</li>
-                  <li>Visual photo or map snippet</li>
-                  <li>Walking time/route to main buildings</li>
-                </ul>
-              </li>
-            </ul>
-
-            <p className="font-semibold mb-2">Option B: Integration Points</p>
-            <ul className="list-disc ml-6 text-gray-700 space-y-1">
-              <li>Add parking info to presenter portal (/presenter page)</li>
-              <li>Include GPS coordinates in email confirmations</li>
-              <li>Add to general /directions page for all attendees</li>
-              <li>QR codes that open navigation directly</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mb-6">
-          <h3 className="text-xl font-semibold mb-2">How It Works</h3>
-          <p className="text-gray-700 mb-4">
-            Direct map links using GPS coordinates work with all major navigation apps:
-          </p>
-          <div className="bg-gray-50 p-4 rounded-lg font-mono text-sm space-y-2">
-            <div>
-              <strong>Google Maps:</strong> https://www.google.com/maps?q=34.1234,-79.5678
-            </div>
-            <div>
-              <strong>Apple Maps:</strong> https://maps.apple.com/?q=34.1234,-79.5678
-            </div>
-            <div>
-              <strong>Waze:</strong> https://waze.com/ul?ll=34.1234,-79.5678
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-6">
-          <h3 className="text-xl font-semibold mb-2">Example Display</h3>
-          <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#947843]">
-            <h4 className="font-bold text-lg mb-2">Presenter Parking Lot</h4>
-            <p className="text-gray-700 mb-3">📍 34.1234, -79.5678</p>
-            <div className="flex gap-3 mb-3">
-              <button className="bg-[#947843] text-white px-4 py-2 rounded-lg font-semibold">
-                Navigate in Google Maps
-              </button>
-              <button className="bg-[#3E5C73] text-white px-4 py-2 rounded-lg font-semibold">
-                Navigate in Apple Maps
-              </button>
-              <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold">
-                Copy Coordinates
-              </button>
-            </div>
-            <p className="text-sm text-gray-600 italic">
-              Note: Use these exact coordinates - the building address may route you to the wrong entrance
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-gray-50 p-4 rounded-lg">
-          <h3 className="text-lg font-semibold mb-2">What's Needed to Implement</h3>
-          <ul className="list-disc ml-6 text-gray-700 space-y-1">
-            <li>Actual GPS coordinates for each parking area (can get from Google Maps)</li>
-            <li>Optional: Photos of each parking lot entrance</li>
-            <li>Walking directions/times from each lot to buildings</li>
-            <li>Any special instructions (e.g., "Look for signs marked 'Conference Parking'")</li>
-          </ul>
-        </div>
-
-        <div className="bg-gray-50 p-4 rounded-lg mt-4">
-          <h3 className="text-lg font-semibold mb-2">Implementation Effort</h3>
-          <p className="text-gray-700">
-            <strong>Low to Medium effort</strong> - Mainly data collection (getting coordinates) and creating a simple page with links.
-            The map links themselves are very straightforward to implement.
-          </p>
-        </div>
-      </div>
-
-      {/* Summary */}
+      {/* Planning Information */}
       <div className="bg-white rounded-lg shadow-lg p-8">
         <h2 className="text-3xl font-bold mb-4 text-[#947843]">Implementation Recommendation</h2>
 
@@ -245,10 +140,9 @@ export default function NavigationFeaturesPage() {
         </div>
       </div>
 
-      <div className="bg-[#DDB672] text-black rounded-lg p-6 mt-8">
-        <p className="text-center">
-          <strong>Note:</strong> This is a planning document. Features outlined here are not yet implemented.
-          This page can be shared with stakeholders to discuss which features to prioritize.
+      <div className="bg-gray-100 text-gray-700 rounded-lg p-6 mt-8">
+        <p className="text-center text-sm">
+          <strong>Note:</strong> The sections below outline potential future navigation features that are currently in the planning phase.
         </p>
       </div>
     </div>
