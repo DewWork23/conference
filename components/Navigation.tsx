@@ -53,7 +53,7 @@ export default function Navigation() {
     { name: 'CEU Tracking', path: '/ceu', keywords: ['ceu', 'credits', 'continuing education'] },
     { name: 'Network', path: '/networking', keywords: ['network', 'attendees', 'connect'] },
     { name: 'Admin', path: '/admin', keywords: ['admin', 'dashboard', 'management'] },
-    { name: 'Navigation Features (Planning)', path: '/navigation-features', keywords: ['navigation', 'features', 'planning', 'buildings', 'parking', 'gps'] },
+    { name: 'Directions', path: '/navigation-features', keywords: ['directions', 'navigation', 'features', 'planning', 'buildings', 'parking', 'gps'] },
   ];
 
   // Search logic
@@ -306,6 +306,14 @@ export default function Navigation() {
               >
                 NETWORK
               </Link>
+              <Link
+                href="/navigation-features"
+                className={`text-white font-bold text-base hover:text-[#DDB672] transition-colors tracking-wide ${
+                  isActive('/navigation-features') ? 'text-[#DDB672]' : ''
+                }`}
+              >
+                DIRECTIONS
+              </Link>
             </div>
           </div>
         </div>
@@ -419,7 +427,7 @@ export default function Navigation() {
                 onClick={() => setMenuOpen(false)}
                 className="block px-6 py-4 font-bold text-lg text-black hover:bg-[#DDB672]/20 border-l-4 border-transparent hover:border-[#947843] transition-all"
               >
-                Navigation Features (Planning)
+                Directions
               </Link>
             </li>
           </ul>
