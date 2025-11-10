@@ -10,7 +10,7 @@ export default function NavigationFeaturesPage() {
         {/* Quick Navigation Link */}
         <div className="bg-[#947843] text-white rounded-lg p-6 mb-6 text-center">
           <a
-            href="https://www.google.com/maps/dir/?api=1&destination=MRQ2+862,+Pembroke,+NC+28372"
+            href="https://www.google.com/maps/dir/?api=1&destination=MRQ2%2B862,+Pembroke,+NC+28372"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-[#947843] px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
