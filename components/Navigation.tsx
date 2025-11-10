@@ -120,9 +120,11 @@ export default function Navigation() {
               {/* Conference Logo/Title */}
               <Link href="/" className="flex items-center">
                 <div className="flex items-center space-x-3">
-                  <div className="w-16 h-16 bg-[#947843] rounded-full flex items-center justify-center font-bold text-white text-lg">
-                    SW
-                  </div>
+                  <img
+                    src="/Primary Horizontal_wg_RGB.png"
+                    alt="SPARC Logo"
+                    className="h-14 w-auto"
+                  />
                   <div>
                     <div className="font-bold text-base tracking-wide text-white">Southeastern Social Work Conference</div>
                     <div className="text-xs text-gray-300">Voices from the Field 2026</div>
@@ -272,9 +274,11 @@ export default function Navigation() {
             <div className="flex justify-center">
               <Link href="/" className="flex items-center">
                 <div className="flex items-center space-x-3">
-                  <div className="w-20 h-20 bg-[#947843] rounded-full flex items-center justify-center font-bold text-white text-xl">
-                    SW
-                  </div>
+                  <img
+                    src="/Primary Horizontal_wg_RGB.png"
+                    alt="SPARC Logo"
+                    className="h-16 w-auto"
+                  />
                   <div>
                     <div className="font-bold text-lg tracking-wide text-white">Southeastern Social Work Conference</div>
                     <div className="text-xs text-gray-300">Voices from the Field 2026</div>
