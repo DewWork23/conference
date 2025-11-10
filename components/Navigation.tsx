@@ -117,19 +117,13 @@ export default function Navigation() {
                 </svg>
               </button>
 
-              {/* Conference Logo/Title */}
-              <Link href="/" className="flex items-center">
-                <div className="flex items-center space-x-3">
-                  <img
-                    src="/Primary Horizontal_wg_RGB.png"
-                    alt="UNC Pembroke Logo"
-                    className="h-14 w-auto"
-                  />
-                  <div>
-                    <div className="font-bold text-base tracking-wide text-white">Southeastern Social Work Conference</div>
-                    <div className="text-xs text-gray-300">Voices from the Field 2026</div>
-                  </div>
-                </div>
+              {/* Conference Logo */}
+              <Link href="/">
+                <img
+                  src="/Primary Horizontal_wg_RGB.png"
+                  alt="UNC Pembroke Logo"
+                  className="h-14 w-auto"
+                />
               </Link>
             </div>
           ) : (
@@ -269,21 +263,15 @@ export default function Navigation() {
             )}
           </div>
 
-          {/* Center - Conference Logo/Title (truly centered) */}
+          {/* Center - Conference Logo (truly centered) */}
           {!searchOpen && (
             <div className="flex justify-center">
-              <Link href="/" className="flex items-center">
-                <div className="flex items-center space-x-3">
-                  <img
-                    src="/Primary Horizontal_wg_RGB.png"
-                    alt="UNC Pembroke Logo"
-                    className="h-16 w-auto"
-                  />
-                  <div>
-                    <div className="font-bold text-lg tracking-wide text-white">Southeastern Social Work Conference</div>
-                    <div className="text-xs text-gray-300">Voices from the Field 2026</div>
-                  </div>
-                </div>
+              <Link href="/">
+                <img
+                  src="/Primary Horizontal_wg_RGB.png"
+                  alt="UNC Pembroke Logo"
+                  className="h-16 w-auto"
+                />
               </Link>
             </div>
           )}
