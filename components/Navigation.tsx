@@ -125,7 +125,7 @@ export default function Navigation() {
                 <img
                   src={`${basePath}/Primary_Horizontal_wg_RGB.png`}
                   alt="UNC Pembroke Logo"
-                  className="h-14 w-auto"
+                  className="h-28 w-auto"
                 />
               </Link>
             </div>
@@ -273,7 +273,7 @@ export default function Navigation() {
                 <img
                   src={`${basePath}/Primary_Horizontal_wg_RGB.png`}
                   alt="UNC Pembroke Logo"
-                  className="h-16 w-auto"
+                  className="h-32 w-auto"
                 />
               </Link>
             </div>
