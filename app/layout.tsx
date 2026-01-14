@@ -12,7 +12,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Southeastern Social Work Conference 2026",
-  description: "Voices from the Field - March 26-27, 2026 at UNC Pembroke",
+  description: "Voices from the Field - Thursday, March 26th - Friday, March 27th, 2026 at UNC Pembroke",
 };
 
 export default function RootLayout({

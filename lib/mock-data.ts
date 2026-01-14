@@ -604,7 +604,7 @@ export const announcements: Announcement[] = [
   {
     id: 'a1',
     title: 'Welcome to the 2026 Southeastern Social Work Conference!',
-    content: 'We\'re thrilled to welcome you to UNC Pembroke for "Voices from the Field." Check-in begins at 8:00 AM on March 26 at the Chavis University Center lobby. Don\'t forget to pick up your conference materials and name badge!',
+    content: 'We\'re thrilled to welcome you to UNC Pembroke for "Voices from the Field." Check-in begins at 8:00 AM on Thursday, March 26th at the Chavis University Center lobby. Don\'t forget to pick up your conference materials and name badge!',
     timestamp: '2026-03-25T14:00:00',
     priority: 'high'
   },
@@ -653,7 +653,7 @@ export const announcements: Announcement[] = [
   {
     id: 'a8',
     title: 'Day 2 Continental Breakfast',
-    content: 'Continental breakfast will be available from 8:00-9:00 AM in the Chavis University Center lobby on Thursday, March 27. Coffee and tea will be available throughout the day.',
+    content: 'Continental breakfast will be available from 8:00-9:00 AM in the Chavis University Center lobby on Friday, March 27th. Coffee and tea will be available throughout the day.',
     timestamp: '2026-03-26T16:00:00',
     priority: 'normal'
   },

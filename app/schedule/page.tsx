@@ -92,8 +92,8 @@ export default function SchedulePage() {
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#947843] focus:border-transparent"
             >
               <option value="all">All Days</option>
-              <option value="2026-03-26">Day 1 - March 26</option>
-              <option value="2026-03-27">Day 2 - March 27</option>
+              <option value="2026-03-26">Day 1 - Thursday, March 26th</option>
+              <option value="2026-03-27">Day 2 - Friday, March 27th</option>
             </select>
           </div>
 
